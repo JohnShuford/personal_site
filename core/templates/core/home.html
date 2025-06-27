@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Home - John Shuford{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container">
+        <img src="{% static 'core/images/headshot.png' %}" alt="John Shuford" class="profile-img mb-4">
+        <h1 class="display-4 mb-3">John Shuford</h1>
+        <p class="lead">My name is John Shuford — thank you for being here! I'm an analytics engineer exploring front-end and full-stack development.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h5 class="card-title">Analytics Engineering</h5>
+                <p class="card-text">Experienced in building data pipelines, ETL processes, and business intelligence solutions.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h5 class="card-title">Full-Stack Development</h5>
+                <p class="card-text">Currently exploring modern web development technologies and frameworks.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h5 class="card-title">Continuous Learning</h5>
+                <p class="card-text">Always eager to learn new technologies and improve existing skills.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
