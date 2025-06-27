@@ -3,22 +3,22 @@
 {% block title %}{{ post.title }} - John Shuford{% endblock %}
 
 {% block content %}
-<div class="mb-4">
-    <a href="{% url 'blog' %}" class="btn btn-outline-primary">&larr; Back to Blog</a>
+<div class="mb-8">
+    <a href="{% url 'blog' %}" class="inline-flex items-center px-4 py-2 border border-pine-green text-pine-green hover:bg-pine-green hover:text-white rounded-md transition-colors">&larr; Back to Blog</a>
 </div>
 
 <article>
-    <header class="mb-4">
-        <h1 class="display-5">{{ post.title }}</h1>
-        <p class="text-muted">Published on {{ post.created_at|date:"F d, Y" }}</p>
+    <header class="mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">{{ post.title }}</h1>
+        <p class="text-gray-600">Published on {{ post.created_at|date:"F d, Y" }}</p>
     </header>
     
-    <div class="blog-content">
+    <div class="blog-content prose prose-lg max-w-none">
         {{ post.content|linebreaks }}
     </div>
 </article>
 
-<div class="mt-5 pt-4 border-top">
-    <a href="{% url 'blog' %}" class="btn btn-primary">View All Posts</a>
+<div class="mt-12 pt-8 border-t border-gray-200">
+    <a href="{% url 'blog' %}" class="btn-pine px-6 py-3 rounded-md transition-colors">View All Posts</a>
 </div>
 {% endblock %}

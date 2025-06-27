@@ -3,57 +3,75 @@
 {% block title %}Resume - John Shuford{% endblock %}
 
 {% block content %}
-<div class="text-center mb-5">
-    <h1 class="display-4">Resume</h1>
-    <p class="lead">Professional Experience & Education</p>
+<div class="text-center mb-12">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Resume</h1>
+    <p class="text-xl text-gray-600">Professional Experience & Education</p>
 </div>
 
-<div class="text-center mb-4">
-    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#timelineModal">
+<div class="text-center mb-8">
+    <button type="button" class="btn-pine px-8 py-3 text-lg font-semibold rounded-md transition-colors" onclick="toggleModal()">
         Click to see interactive timeline
     </button>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="timelineModal" tabindex="-1" aria-labelledby="timelineModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="timelineModalLabel">Interactive Timeline</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div id="timelineModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden z-50">
+    <div class="flex justify-center items-center min-h-screen p-4">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-6xl max-h-[90vh] overflow-hidden">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h5 class="text-xl font-semibold">Interactive Timeline</h5>
+                <button type="button" class="text-gray-400 hover:text-gray-600" onclick="toggleModal()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
             </div>
-            <div class="modal-body p-0">
+            <div class="p-0">
                 <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vT3TKYEIgMj6cooA0HO7NAVTz9qWsf5O1ZNqVcfWEEXKVzg0AlvCtFJuxjYxjCod8s6uMRig0Vh5hq0&font=Default&lang=en&initial_zoom=2&width=100%25&height=700' width='100%' height='700' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
             </div>
         </div>
     </div>
 </div>
 
-<h2 class="mb-4">Professional Experience</h2>
+<h2 class="text-2xl font-bold mb-8">Professional Experience</h2>
 <div class="timeline">
     {% for job in experience %}
     <div class="timeline-item">
         <div class="timeline-content">
-            <h4>{{ job.title }}</h4>
-            <h5 class="text-primary">{{ job.company }}</h5>
-            <p class="text-muted">{{ job.period }}</p>
-            <p>{{ job.description }}</p>
+            <h4 class="text-lg font-semibold">{{ job.title }}</h4>
+            <h5 class="text-pine-green font-medium">{{ job.company }}</h5>
+            <p class="text-gray-500 text-sm">{{ job.period }}</p>
+            <p class="text-gray-700">{{ job.description }}</p>
         </div>
     </div>
     {% endfor %}
 </div>
 
-<h2 class="mb-4 mt-5">Education</h2>
+<h2 class="text-2xl font-bold mb-8 mt-12">Education</h2>
 <div class="timeline">
     {% for edu in education %}
     <div class="timeline-item">
         <div class="timeline-content">
-            <h4>{{ edu.degree }}</h4>
-            <h5 class="text-primary">{{ edu.school }}</h5>
-            <p class="text-muted">{{ edu.period }}</p>
-            <p>{{ edu.description }}</p>
+            <h4 class="text-lg font-semibold">{{ edu.degree }}</h4>
+            <h5 class="text-pine-green font-medium">{{ edu.school }}</h5>
+            <p class="text-gray-500 text-sm">{{ edu.period }}</p>
+            <p class="text-gray-700">{{ edu.description }}</p>
         </div>
     </div>
     {% endfor %}
 </div>
+
+<script>
+function toggleModal() {
+    const modal = document.getElementById('timelineModal');
+    modal.classList.toggle('hidden');
+}
+
+// Close modal when clicking outside
+document.getElementById('timelineModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        toggleModal();
+    }
+});
+</script>
 {% endblock %}

@@ -5,37 +5,25 @@
 
 {% block content %}
 <div class="hero-section">
-    <div class="container">
-        <img src="{% static 'core/images/headshot.png' %}" alt="John Shuford" class="profile-img mb-4">
-        <h1 class="display-4 mb-3">John Shuford</h1>
-        <p class="lead">My name is John Shuford — thank you for being here! I'm an analytics engineer exploring front-end and full-stack development.</p>
+    <div class="container mx-auto px-4">
+        <img src="{% static 'core/images/headshot.png' %}" alt="John Shuford" class="profile-img">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">John Shuford</h1>
+        <p class="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">My name is John Shuford — thank you for being here! I'm an analytics engineer exploring front-end and full-stack development.</p>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4 mb-4">
-        <div class="card h-100">
-            <div class="card-body text-center">
-                <h5 class="card-title">Analytics Engineering</h5>
-                <p class="card-text">Experienced in building data pipelines, ETL processes, and business intelligence solutions.</p>
-            </div>
-        </div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-white rounded-lg shadow-md p-6 text-center border-2 border-muted-gold hover:-translate-y-1 transition-transform duration-200">
+        <h5 class="text-xl font-semibold text-rust-orange mb-4">Analytics Engineering</h5>
+        <p class="text-gray-700">Experienced in building data pipelines, ETL processes, and business intelligence solutions.</p>
     </div>
-    <div class="col-md-4 mb-4">
-        <div class="card h-100">
-            <div class="card-body text-center">
-                <h5 class="card-title">Full-Stack Development</h5>
-                <p class="card-text">Currently exploring modern web development technologies and frameworks.</p>
-            </div>
-        </div>
+    <div class="bg-white rounded-lg shadow-md p-6 text-center border-2 border-muted-gold hover:-translate-y-1 transition-transform duration-200">
+        <h5 class="text-xl font-semibold text-rust-orange mb-4">Full-Stack Development</h5>
+        <p class="text-gray-700">Currently exploring modern web development technologies and frameworks.</p>
     </div>
-    <div class="col-md-4 mb-4">
-        <div class="card h-100">
-            <div class="card-body text-center">
-                <h5 class="card-title">Continuous Learning</h5>
-                <p class="card-text">Always eager to learn new technologies and improve existing skills.</p>
-            </div>
-        </div>
+    <div class="bg-white rounded-lg shadow-md p-6 text-center border-2 border-muted-gold hover:-translate-y-1 transition-transform duration-200">
+        <h5 class="text-xl font-semibold text-rust-orange mb-4">Continuous Learning</h5>
+        <p class="text-gray-700">Always eager to learn new technologies and improve existing skills.</p>
     </div>
 </div>
 {% endblock %}
