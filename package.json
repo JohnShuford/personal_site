@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  },
+  "name": "personal_site",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./core/static/core/css/input.css -o ./core/static/core/css/style.css --watch",
+    "build": "tailwindcss -i ./core/static/core/css/input.css -o ./core/static/core/css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnShuford/personal_site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnShuford/personal_site/issues"
+  },
+  "homepage": "https://github.com/JohnShuford/personal_site#readme",
+  "description": ""
+}
