@@ -5,16 +5,17 @@
 
 {% block content %}
 <div class="hero-section">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 rounded-md">
         <img src="{% static 'core/images/headshot.png' %}" alt="John Shuford" class="profile-img">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">John Shuford</h1>
-        <p class="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">My name is John Shuford — thank you for being here! I'm an analytics engineer exploring front-end and full-stack development.</p>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-amber-200">John Shuford</h1>
+        <p class="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto text-amber-200">
+            My name is John Shuford — thank you for being here! I'm an analytics engineer exploring front-end and full-stack development.</p>
     </div>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
     <div class="bg-white rounded-lg shadow-md p-6 text-center border-2 border-gray-300 hover:-translate-y-1 transition-transform duration-200">
-        <h5 class="text-xl font-semibold text-red-600 mb-4">Analytics Engineering</h5>
+        <h5 class="text-xl font-semibold text-blue-300 mb-4">Analytics Engineering</h5>
         <p class="text-gray-700">Experienced in building data pipelines, ETL processes, and business intelligence solutions.</p>
     </div>
     <div class="bg-white rounded-lg shadow-md p-6 text-center border-2 border-gray-300 hover:-translate-y-1 transition-transform duration-200">
@@ -23,7 +24,7 @@
     </div>
     <div class="bg-white rounded-lg shadow-md p-6 text-center border-2 border-gray-300 hover:-translate-y-1 transition-transform duration-200">
         <h5 class="text-xl font-semibold text-red-600 mb-4">Continuous Learning</h5>
-        <p class="text-blue-100">Always eager to learn new technologies and improve existing skills.</p>
+        <p class="text-gray-700">Always eager to learn new technologies and improve existing skills.</p>
     </div>
 </div>
 {% endblock %}
