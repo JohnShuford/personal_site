@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
 </head>
 <body>
-    <nav class="bg-gray-100 shadow-sm">
-        <div class="container mx-auto px-4 py-3">
+    <nav class="bg-green-50 shadow-sm">
+        <div class="container mx-auto px-4 py-10">
             <div class="flex justify-between items-center">
-                <a class="text-xl font-semibold text-gray-800 hover:text-green-700 transition-colors" href="{% url 'home' %}">John Shuford</a>
+                <a class="text-4xl font-semibold text-gray-800 hover:text-green-700 transition-colors" href="{% url 'home' %}">John Shuford</a>
                 <button class="md:hidden flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-gray-800" type="button" id="mobile-menu-button">
                     <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <title>Menu</title>
@@ -21,10 +21,10 @@
                 <div class="hidden md:flex md:items-center md:space-x-8" id="navbar-menu">
                     <ul class="flex space-x-8">
                         <li>
-                            <a class="bg-sky-100 py-1 px-2 rounded-sm border-green-700 border-2 border-double text-gray-700 hover:text-sky-100 hover:bg-sky-500 transition-colors" href="{% url 'home' %}">Home</a>
+                            <a class="bg-sky-100 py-2 px-4 rounded-sm border-green-700 border-2 border-double text-gray-700 hover:text-sky-100 hover:bg-sky-500 transition-colors" href="{% url 'home' %}">Home</a>
                         </li>
                         <li>
-                            <a class="text-gray-700 hover:text-green-700 transition-colors" href="{% url 'resume' %}">Resume</a>
+                            <a class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-lime-400" href="{% url 'resume' %}">Resume</a>
                         </li>
                         <li>
                             <a class="text-gray-700 hover:text-green-700 transition-colors" href="{% url 'blog' %}">Blog</a>
@@ -54,7 +54,7 @@
         </div>
     </nav>
 
-    <main class="container mx-auto px-4 py-12 max-w-6xl">
+    <main class="container mx-auto px-4 py-12 max-w-8xl">
         {% block content %}
         {% endblock %}
     </main>
